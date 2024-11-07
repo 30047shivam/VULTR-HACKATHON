@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sentiment Analysis Dashboard</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    <canvas id="sentimentChart"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('sentimentChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // Populate with dates
+                datasets: [{
+                    label: 'Sentiment Score',
+                    data: [] // Populate with sentiment scores
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
